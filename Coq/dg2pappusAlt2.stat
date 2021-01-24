@@ -1,0 +1,77 @@
+# fichier dg2papusAlt2.stat
+# preuve de DG implique Pappus, mais où tous les existenciels sont réglés à la main
+# résumé de la construction
+# On se donne 7 points
+# Oo A B C Ap Bp Cp P
+# Oo A B C Ap Bp Cp définissent un plan Pi
+# Oo A B C sont alignés
+# Oo Ap Bp Cp sont alignés
+# P est en dehors de Pi
+# on construit 3 points X Y et Z
+# X = ABp inter ApB 
+# Y = ACp inter ACp
+# Z = BCp inter CpB
+# On choisir un point Q sur la droite XP
+# Q est sur la droite XP
+# on doit en conclure que Q est dans les plans XPBAp et XPBpA
+# et donc les droites BQ et ApP se coupent
+# et aussi les droites BpQ et Ap se coupent
+# --> variante alt : on ne définit pas les 2 points d'intersection
+# --> des droites précédentes
+# On construit le point R avec DG
+# en considérant 
+#   - la transversale issue de C et coupant les droites ApP et BpQ
+#   - et la transversale issue de Cp et coupant les droites AP et BQ
+# on doit en déduire que les points X, Y et Z sont alignés
+# On ne va pas utiliser des couches et essayer d'impliquer le moins de points
+# possible
+context
+    dimension 3
+    layers 1
+endofcontext
+layer donnees
+    points
+        Oo A B C Ap Bp Cp P X Y Z Q A1 B1 Ap1 Bp1 R
+    hypotheses
+        Oo A B C : 2
+        Oo Ap Bp Cp : 2
+        Oo A Ap : 3
+        Oo B Bp : 3
+        Oo C Cp : 3
+        A B : 2
+        A C : 2
+        B C : 2
+        Ap Bp : 2
+        Ap Cp : 2
+        Bp Cp : 2
+        Oo A B C Ap Bp Cp P : 4
+        A Bp X : 2
+        Ap B X : 2
+        A Cp Y : 2
+        Ap C Y : 2
+        B Cp Z : 2
+        Bp C Z : 2
+        X P Q : 2
+        X Q : 2
+        P Q : 2
+        A P A1 : 2
+        A P A1 Cp : 3
+        B Q B1 : 2
+        Cp A1 B1 : 2
+        Ap P Ap1 : 2
+        Ap P Ap1 C : 3
+        Bp Q Bp1 : 2
+        C Ap1 Bp1 : 2
+        C Ap1 Bp1 R : 2
+        Cp A1 B1 R : 2
+    conclusion
+        X Y Z : 2
+endoflayer 
+conclusion
+    X Y Z : 2
+end
+
+    
+
+
+    

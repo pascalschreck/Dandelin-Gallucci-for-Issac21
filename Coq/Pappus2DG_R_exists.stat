@@ -1,0 +1,54 @@
+context
+    dimension 3
+    layers 1
+endofcontext
+layer donnees
+    points
+         Oo A B C Ap Bp Cp X Y Z M N P Q 
+    hypotheses
+        Oo A : 2
+        Oo B : 2
+        Oo C : 2
+        A B : 2
+        A C : 2
+        B C : 2
+        Oo Ap : 2
+        Oo Bp : 2
+        Oo Cp : 2
+        Ap Bp : 2
+        Ap Cp : 2
+        Bp Cp : 2
+        Oo A B C : 2                # a
+        Ap M Q : 2               # b
+        Oo A B C Ap M Q : 4      # a and b are not coplanar
+        Bp P N : 2                # c
+        Oo A B C Bp P N : 4       # a and c are not coplanar
+        Ap M Q Bp P N : 4      # b and c are not coplanar
+
+        
+        
+        
+        Oo Ap Bp Cp : 2             # e
+        Oo A Ap : 3                 # a and e are different
+        A M P : 2                 # f
+        Oo Ap Bp Cp A M P : 4     # e and f are not coplanar
+        B Q N : 2                 # g
+        Oo Ap Bp Cp B Q N : 4     # e and g are not coplanar
+        A M P B Q N : 4         # f and g are not coplanar
+
+        
+        
+        
+        X A Bp : 2                  # 1st Pappus point
+        X Ap B : 2
+        Y A Cp : 2                  # 2nd Pappus point
+        Y Ap C : 2
+        Z C Bp : 2                  # 3rd Pappus point
+        Z Cp B : 2
+        X Y Z : 2                   # Pappus colinearity
+    conclusion
+        Y M Z N : 3             # YM and ZN are coplanar thus they meet 
+endoflayer 
+conclusion
+    Y M Z N : 3             # YM and ZN are coplanar thus they meet
+end 

@@ -1,0 +1,56 @@
+context
+    dimension 3
+    layers 1
+endofcontext
+layer donnees
+    points
+         Oo A B C Ap Bp Cp X Y Z M N Sp T U V R
+    hypotheses
+        Oo A : 2
+        Oo B : 2
+        Oo C : 2
+        A B : 2
+        A C : 2
+        B C : 2
+        Oo Ap : 2
+        Oo Bp : 2
+        Oo Cp : 2
+        Ap Bp : 2
+        Ap Cp : 2
+        Bp Cp : 2
+        Oo A B C : 2                # a
+        Ap M Sp : 2               # b
+        Oo A B C Ap M Sp : 4      # a and b are not coplanar
+        Bp N T : 2                # c
+        Oo A B C Bp N T : 4       # a and c are not coplanar
+        Ap M Sp Bp N T : 4      # b and c are not coplanar
+        Cp U V : 2                  # d
+        Oo A B C Cp U V : 4         # a and d are not coplanar
+        Ap M Sp Cp U V : 4        # b and d are not coplanar
+        Bp N T Cp U V : 4         # c and d are not coplanar
+        Oo Ap Bp Cp : 2             # e
+        Oo A Ap : 3                 # a and e are different
+        A M U : 2                 # f
+        Oo Ap Bp Cp A M U : 4     # e and f are not coplanar
+        B N V : 2                 # g
+        Oo Ap Bp Cp B N V : 4     # e and g are not coplanar
+        A M U B N V : 4         # f and g are not coplanar
+        C Sp T : 2                  # h
+        Oo Ap Bp Cp C Sp T : 4      # e and h are not coplanar
+        A M U C Sp T : 4          # f and h are not coplanar
+        B N V C Sp T : 4          # g and h are not coplanar
+        X A Bp : 2                  # 1st Pappus point
+        X Ap B : 2
+        Y A Cp : 2                  # 2nd Pappus point
+        Y Ap C : 2
+        Z C Bp : 2                  # 3rd Pappus point
+        Z Cp B : 2
+        X Y Z : 2                   # Pappus colinearity
+        Y M R : 2                   # addition of R
+        Z N R : 2                   # 
+    conclusion
+        C Sp T Cp U V : 3           # d and h are coplanar
+endoflayer 
+conclusion
+    C Sp T Cp U V : 3
+end 
