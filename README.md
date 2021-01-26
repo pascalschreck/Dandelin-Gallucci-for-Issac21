@@ -24,7 +24,7 @@ You just have to add the preamble instead of the first line.
 ## Proof of Pappus implies DG
 There are three steps
 
-* building an instance of Pappus : this is done by hand. It is hard to discover a particular instance in the figure and how tu use it. Here points X, Y and Z are constructed following the geometric proof given int the paper.
+* building an instance of Pappus : this is done by hand. It is hard to discover a particular instance in the figure and how tu use it. Here points X, Y and Z are constructed following the geometric proof given in the paper.
 * proving that the lines YM and ZN are different and coplanar, hence their intersection consists in one point. It is called R in the geometric proof.
 * proving that lines h and d are coplanar.
 

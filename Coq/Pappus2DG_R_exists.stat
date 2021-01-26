@@ -45,10 +45,10 @@ layer donnees
         Y Ap C : 2
         Z C Bp : 2                  # 3rd Pappus point
         Z Cp B : 2
-        X Y Z : 2                   # Pappus colinearity
+        X Y Z : 2                   
     conclusion
-        Y M Z N : 3             # YM and ZN are coplanar thus they meet 
+        Y M Z N : 3             
 endoflayer 
 conclusion
-    Y M Z N : 3             # YM and ZN are coplanar thus they meet
+    Y M Z N : 3            
 end 

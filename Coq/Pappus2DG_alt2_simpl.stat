@@ -47,9 +47,9 @@ layer donnees
         Z Cp B : 2
         X Y Z : 2                   # Pappus colinearity
         Y M R : 2                   # addition of R
-        Z N R : 2                   # 
+        Z N R : 2                    
     conclusion
-        C Sp T Cp U V : 3           # d and h are coplanar
+        C Sp T Cp U V : 3           
 endoflayer 
 conclusion
     C Sp T Cp U V : 3
